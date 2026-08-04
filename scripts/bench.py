@@ -155,9 +155,13 @@ def cmd_speed(args) -> None:
 
 
 def cmd_estop(_args) -> None:
+    # Broadcast (0xFE) writes get NO reply from servos by design.
+    # Absence of a reply is success for the soft-kill path.
     ser = open_port()
-    r = unpack_reply(send(ser, 0xFE, 0x03, bytes([0x28, 0x00])))  # broadcast torque off
-    print("estop: broadcast torque-off frame sent" if r["ok"] else f"send issue: {r}")
+    ser.reset_input_buffer()
+    ser.write(frame(0xFE, 0x03, bytes([0x28, 0x00])))
+    ser.flush()
+    print("estop: broadcast torque-off frame sent (no reply expected; verify limp + PSU off)")
     ser.close()
 
 

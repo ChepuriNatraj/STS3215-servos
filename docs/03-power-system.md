@@ -15,10 +15,10 @@
 | Adapter input label | 9 – 12.6 V — that is for the *12 V* STS3215 variant; it is **not** your max | Waveshare wiki + datasheet |
 | Current source | Bench PSU (variable, current-limited), e.g. OWON SPE-series | your bench |
 
-> ⚠️ **Over-voltage budget:** the 7.4 V variant's protection trips > 7.4 V (§0x0E
-> default 80 × 0.1 V) and *auto-clears*; if the over-voltage persists long enough, the
-> H-bridge and MCU take the abuse. Cap the PSU at **7.40 V** and set a hard current
-> limit before enabling the output.
+> ⚠️ **Over-voltage budget:** the servo firmware's out-of-box over-voltage trip is
+> **8.0 V** (register 0x0E default 80 × 0.1 V) — but **7.4 V is the variant's rated
+> maximum input** (datasheet §5-7). Never lean on the 8.0 V trip: cap the PSU at
+> **7.40 V** and set a hard current limit before enabling the output.
 
 ## 3.2 Voltage rails
 
@@ -65,7 +65,7 @@ PSU  ──►  adapter V_in  ──►  bus V  ──►  [each servo]
 | PSU current limit (you) | servos + loom | set before output ON | — |
 | PSU over-voltage cap (you) | servos | 7.40 V max | datasheet §5-7 |
 | Servo over-current protection | each motor | >2 A for 2 s → torque off (default) | datasheet §7-11 |
-| Servo over-voltage/under-voltage | each motor | >7.4 / <4 V → alarm, auto-clear | datasheet §7-11 |
+| Servo over-voltage/under-voltage | each motor | firmware default trip 8.0 / 4.0 V (§0x0E/§0x0F); alarm-bit, auto-clear | datasheet §7-11 + memory table |
 | Servo over-temp | each motor | >70 °C → torque off | datasheet §7-11 |
 | LeRobot `disable_torque_on_disconnect` | operator | torque OFF when driver disconnects | LeRobot config |
 

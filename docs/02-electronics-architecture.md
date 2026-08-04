@@ -132,7 +132,7 @@ On the **servo** level — [VERIFIED] datasheet §7-11, memory-table V3.6:
 |---|---|---|---|
 | Over-load | load > 80 % stall sustained ≥ 2 s (§0x24/§0x23) | reduce to 20 % torque (§0x22) | new position cmd clears |
 | Over-current | current > 2 A sustained ≥ 2 s (§0x1C/§0x26) | torque output off | new position cmd clears |
-| Over/under-voltage | above 7.4 V / below 4 V (§0x0E/§0x0F) | protect; alarm bit set | auto when back in range |
+| Over/under-voltage | default trip 8.0 V / 4.0 V (§0x0E default 80 / §0x0F default 40, 0.1 V units); datasheet prose cites 7.4 V as variant's rated max | protect; alarm bit set | auto when back in range |
 | Over-temperature | > 70 °C (§0x0D) | torque off | auto when cooled |
 | Write-lock | EEPROM lock bit (§0x37) | EPROM writes not persisted | write 0 to unlock |
 

@@ -129,18 +129,18 @@ cross-checked against datasheet hints ("address 40 → value 128 = set mid-point
 | 0x09/0x0B | Min/Max angle limit | 2 | RW/EPROM | 0–4095 steps |
 | 0x0D | Max temp | 1 | RW/EPROM | °C, default 70 |
 | 0x0E/0x0F | Max/Min voltage | 1 | RW/EPROM | 0.1 V units (default 80 → 8.0 V, 40 → 4.0 V) |
-| 0x10 | Max torque | 2 | RW/EPROM | 0.1 % units, default 1000 |
+| 0x10 | Max torque | 2 | RW/EPROM | 0–1000 (1000 = 100 % of max) |
 | 0x13 | Unloading condition | 1 | RW/EPROM | bitfield: which faults unload |
 | 0x15/16/17 | P/D/I coefficients | 1 | RW/EPROM | position PID |
-| 0x1C | Protection current | 2 | RW/EPROM | 6.5 mA units |
+| 0x1C | Protection current | 2 | RW/EPROM | 6.5 mA/unit (default 500 ≈ 3.25 A) |
 | 0x21 | Operation mode | 1 | RW/EPROM | 0=position, 1=speed c.l., 2=PWM o.l., 3=step |
-| 0x22/23/24 | Prot. torque/time/overload-torque | 1 | RW/EPROM | % / 10 ms / % |
+| 0x22/23/24 | Prot. torque/time/overload-torque | 1 | RW/EPROM | % (0x24: 80 = 80 % stall) / 10 ms / % |
 | 0x28 | Torque switch | 1 | RW/SRAM | 0=off (default), 1=on, **128=set current pos to 2048** |
 | 0x29 | Acceleration | 1 | RW/SRAM | 100 step/s² units |
 | 0x2A | Target position | 2 | RW/SRAM | steps, −32766…32766 |
 | 0x2C | Running time | 2 | RW/SRAM | 0.001 s units |
-| 0x2E | Running speed | 2 | RW/SRAM | steps/s |
-| 0x30 | Torque limit | 2 | RW/SRAM | 0.1 % units (RAM copy of 0x10) |
+| 0x2E | Running speed | 2 | RW/SRAM | steps/s — official manual example writes 1000; community table max 254 (`[BENCH-CHECK]` full scale) |
+| 0x30 | Torque limit | 2 | RW/SRAM | 0–1000 (1000 = 100 % of max); RAM copy of 0x10 |
 | 0x37 | Lock mark | 1 | RW/SRAM | 1 = EPROM writes not persisted |
 | 0x38 | Current position | 2 | RO | steps, L,H |
 | 0x3A | Current speed | 2 | RO | steps/s |

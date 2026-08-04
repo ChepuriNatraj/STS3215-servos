@@ -193,9 +193,9 @@ can draw stall current quickly.
 ## G10 — Current control (read-only; STS3215 has no current-command mode)
 
 **Objective:** observe and bound motor current; verify the protection current trip.
-**Theory:** current register 0x45 (6.5 mA units, max ~3250 mA); Protection_Current 0x1C
-(default 500 → ~3.2 A? — *check units*: table says 6.5 mA per count ⇒ 500 counts ≈
-3.25 A — near stall, so default rarely trips). LeRobot sets gripper to 250 (~1.6 A).
+**Theory:** current register 0x45 (6.5 mA/unit, max ~3250 mA); Protection_Current 0x1C
+(default 500 counts ≈ 3.25 A — near stall, so the stock trip rarely fires before the
+PSU does). LeRobot configures the **gripper** to 250 counts (~1.6 A) to avoid burnout.
 **Commands:**
 
 ```bash
