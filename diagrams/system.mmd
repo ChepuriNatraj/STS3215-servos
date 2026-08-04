@@ -1,0 +1,23 @@
+flowchart LR
+    HOST["Host PC<br/>Ubuntu 24.04 / LeRobot<br/>SO101Follower"] 
+    USBc["USB Type-C (data)"]
+    ADA["Waveshare Bus Servo Adapter (A)<br/>CH340-class bridge<br/>jumpers = B (USB)"]
+    PWR["Bench PSU<br/>4–7.4 V<br/>current-limited"]
+    BUS["TTL bus: V / D / G<br/>half-duplex 8N1 @1 Mbps"]
+    M1["STS3215 #1<br/>shoulder_pan"]
+    M2["STS3215 #2<br/>shoulder_lift"]
+    M6["STS3215 #6<br/>gripper"]
+    DO["..."]
+
+    HOST -->|"USB"| USBc --> ADA
+    PWR -->|"DC5521 / screw term"| ADA
+    ADA -->|"3-wire: 2× motor ports"| BUS
+    BUS --> M1 -->|"V/D/G daisy-chain"| M2 --> DO --> M6
+    M1 -. encoder/PID .-> BUS
+    M2 -. encoder/PID .-> BUS
+    M6 -. encoder/PID .-> BUS
+
+    classDef power fill:#fde,stroke:#900;
+    classDef data fill:#def,stroke:#069;
+    class HOST,ADA,M1,M2,M6 data;
+    class PWR power;
