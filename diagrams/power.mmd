@@ -1,0 +1,19 @@
+flowchart LR
+    PSU["Bench PSU<br/>0–7.4 V set<br/>current-limited 2–5 A"]
+    DC["DC5521 jack<br/>OR screw terminal<br/>(parallel entry)"]
+    ADA["Adapter (A)<br/>no regulation, no fuse"]
+    VBUS["bus V rail<br/>4.0–7.40 V"]
+    M1["servo #1<br/>logic rail + H-bridge"]
+    M2["servo #2"]
+    M6["servo #6"]
+    G["ground network<br/>PSU→adapter→bus→host (USB G)"]
+
+    PSU -->|"set V ≤ 7.40 · set I-limit · output ON"| DC --> ADA
+    ADA --> VBUS
+    VBUS --> M1 --> M2
+    M2 -. V/G pass-through .-> M6
+    PSU --> G
+    ADA -. USB G tie .-> G
+
+    classDef p fill:#fde,stroke:#900;
+    class PSU,G p;
