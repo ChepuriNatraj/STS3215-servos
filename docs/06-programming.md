@@ -136,7 +136,7 @@ print(frame(bytes.fromhex("FF FF 01 04 02 38 02 BE")).hex(" "))
 ```
 
 **Example C — the bring-up loop the handbook actually gates on (single motor):**
-see `scripts/bench_ping.py` / `scripts/bench_move.py` and ch07.
+see `scripts/bench.py ping` / `scripts/bench.py move --help` and ch07.
 
 ## 6.6 ROS 2 integration (next layer)
 

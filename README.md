@@ -165,16 +165,17 @@ pip install -e ".[feetech]"           # from the LeRobot source checkout
 ```
 
 ```python
-# scripts/ or a REPL — drive servo ID 1 to 2048 at slow speed
+# scripts/ or a REPL — read one servo, nudge it a few degrees
 from lerobot.robots.so_follower import SO101Follower, SO101FollowerConfig
 motor = SO101Follower(SO101FollowerConfig(port="/dev/ttyUSB0", id="bench"))
-motor.connect()
-motor.write("Shoulder_Pan", {"position": 2048})   # [BENCH-CHECK] moves to 2048
+motor.connect(calibrate=False)
+obs = motor.get_observation()                       # {'Shoulder_Pan.pos': float, ...}
+motor.send_action({"Shoulder_Pan.pos": obs["Shoulder_Pan.pos"] - 5.0})   # 5° relative
 motor.disconnect()
 ```
 
-Expected result: the single servo drives slowly to neutral (2048) and holds, then
-unloads on `disconnect()` (torque-off is default). If it does not — `docs/08-debugging.md`.
+Expected result: the single servo reads back in `get_observation()`, drives ~5° and
+holds, then unloads on `disconnect()` (torque-off is default). If it does not — `docs/08-debugging.md`.
 
 ## Common beginner mistakes
 

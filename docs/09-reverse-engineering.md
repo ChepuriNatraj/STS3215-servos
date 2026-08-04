@@ -84,8 +84,12 @@ Where a LA shows *which* bits, the scope shows *how* the line behaves:
 
 ## 9.6 Firmware exploration
 
-- **Adapter:** no user firmware exists (`[VERIFIED]` Waveshare FAQ: chip is a CH340
-  — no programmable MCU in the loop; the board is a bridge).
+- **Adapter:** the USB-serial bridge is **CH340-class** per Waveshare FAQ — however, the
+  public schematic's pin labels (`A1/B12`, `VBUS`, `A4/B9`) hint at a small MCU (e.g.
+  STM32-class) in the control path, and LeRobot's *reference* board enumerates as CDC
+  `ttyACM`. Firm truth: the FAQ confirms **no user-facing firmware to flash**, but
+  whether your board has a programmable MCU between the CH340 and the bus must be
+  decided by teardown/IC-ID — `[BENCH-CHECK]`, do **not** assert either way yet.
 - **Servo:** Feetech publishes **no** servo firmware; the *registers* are the
   interface (ch05 §5.6). Reconstructing beyond the datasheet = reading every
   version/status register (0x00–0x04, 0x41, 0x42) on your units and correlating with
@@ -104,7 +108,8 @@ line — don't.
 
 | Claim | Status | Evidence |
 |---|---|---|
-| Adapter is a CH340 bridge + pass-through power | `[VERIFIED]` | Waveshare FAQ + schematic |
+| Adapter bridge chip | CH340-class (USB-serial) | `[VERIFIED]` | Waveshare FAQ |
+| Adapter has no programmable MCU | — | `[INFERRED]`/`[BENCH-CHECK]` | FAQ says no user firmware; schematic hints at MCU — verify by IC-ID |
 | No fuse on adapter | `[INFERRED]` | schematic (no fuse part found); confirm with scope-on-fault test later |
 | Servo MCU identity | `[UNKNOWN]` | not documented; needs teardown |
 | Encoder IC identity | `[UNKNOWN]` | needs teardown |
