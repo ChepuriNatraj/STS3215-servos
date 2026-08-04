@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Editors
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Transient engineering artifacts
+*.bak
+*~
+
+# Local bench logs (keep the template, ignore the filled-in ones)
+logs/*.md
+!logs/*-template.md
+
+# Downloads cache
+.cache/

@@ -1,0 +1,285 @@
+                    深圳飞特模型有限公司
+        SHENZHEN FEETECH RC MODEL CO.,LTD.
+                               产品规格书
+                       PRODUCT SPECIFICATION
+
+客   户(CUSTOMER)      ：
+型   号(MODEL)         ：STS3215
+名   称(PRODUCT NAME)：7.4V 19KG.CM塑料壳金属齿磁编码双轴TTL串型舵机
+版   本(EDITION)       ：A/0
+
+
+
+
+    在您下单采购本产品之前，请阅读本规格书并在下列确认栏内签字回传。
+       Sign back before you place an order to purchase this product,
+      please read this specification and in the following admit column.
+               飞特确认/ FEETECH APPROVED
+             编写                   审核                   确认
+             EDIT               CHECKED              APPROVED
+
+           李永传                  巫耿炎                   冯潭新
+
+
+
+
+                    客户确认/CUSTOMER APPROVED
+            审阅                    审核                   确认
+           REVIEW               CHECKED              APPROVED
+
+
+
+
+                  地址：广东省深圳市龙岗区横岗镇六约埔厦路60号2楼
+       ADD:Floor 2,No 60,PuXia Road,LiuYueHengGang Town, Long Gang District,
+                              ShenZhen,518173,China
+                 电话/Tel：0755-89335266      网址/Website：www.feetech.cn
+                                 深圳飞特模型有限公司                           版本EDITION：
+                          SHENZHEN FEETECH RC MODEL CO.,LTD.             A/0
+
+     型号/MODEL:                        产品规格书                           日期/Date：
+      STS3215                   PRODUCT SPECIFICATION                 2020-04-10
+                                                                  页      码 Page：2/8
+
+                       本规格书包含以下内容 CONTENT OF PRODUCT
+
+        内容   Content               页     码 Page                备 注 Remark
+1. 使用环境条件                         页    码 Page：3/8
+2. 测试环境                           页    码 Page：3/8
+3. 安全特性与认证                        页    码 Page：3/8
+4. 外观检查                           页    码 Page：3/8
+5. 电气特性                           页    码 Page：3/8
+6. 机械特性                           页    码 Page：4/8
+7-1. 控制特性                         页    码 Page：4/8
+7-2. 控制特性                         页    码 Page：5/8
+8. 可靠性测试                          页    码 Page：6/8
+9. 外观尺寸                           页    码 Page：6/8
+10.配件                             页    码 Page：7/8
+11.接口定义                           页    码 Page：8/8
+12.包装出货简图                         页    码 Page：8/8
+
+
+
+
+                           Revise Record变更记录表
+序号
+          变更内容Content Of Change           版本Edition       更变日期Date        备注Remark
+No.
+ 1               初次发行                        A/0           20200410
+                                         深圳飞特模型有限公司                                       版本EDITION：
+                                  SHENZHEN FEETECH RC MODEL CO.,LTD.                         A/0
+
+        型号/MODEL:                              产品规格书                                       日期/Date：
+         STS3215                         PRODUCT SPECIFICATION                             2020-04-10
+                                                                                        页     码 Page：3/8
+1.使用环境条件 Apply Environmental Condition：
+  No.                        项目(Item)                                     规格(Specification)
+1-1      保存温度Storage Temperature Range                                -30℃～80℃
+1-2      运行温度Operating Temperature Range                              -20℃～60℃
+2.测试环境 Standard Test Environment：
+ No.                               项目(Item)                                   规格(Specification)
+2-1      温度 Temperature Range                                         25℃ ±5℃
+2-2      湿度 Humidity Range                                            65%±10%
+3.安全特性与认证 Secure Performance and Certificate
+
+ No.           项目/Item          认证Certificate                       备注（remarks）
+
+3-1      ASTM F963         No                   美国玩具检测标准
+3-2      EN71              No                   欧盟市场玩具类产品的规范标准
+                                                对电子、电器中的电磁干扰，管理和控制无线电频率范
+3-3      FCC               No
+                                                围，保护电信网络、电器产品的正常工作。
+                                                对任何的物质而言，不给其无法容许的电磁干扰波，且在
+3-4      EMC               Yes                  电磁环境中还需能具有满足其功能的机器，装置或系统的
+                                                能力。
+3-5      ROHS              Yes                  电子，电器设备中对人体有害物质的含量。
+3-6      REACH             NO                   欧盟法规《化学品的注册、评估、授权和限制》
+
+4.外观检查 Appearance Inspection：
+ No.                     项目(Item)                                 规格(Specification)
+4-1      外观尺寸OutlineDrawing                     尺寸见附件(第12项) See the appendix
+                                                无损坏，不允许影响功能
+4-2      外观Appearance
+                                                No damage and mustn’t affect functions.
+
+5.电气特性 Electrical Specification
+
+ No.                     项目(Item)               规格(Specification) 规格(Specification) 备注Remark
+
+5-1      典型工作电压 Operating Voltage                       6V                      7.4V
+5-2      空载速度 No Load Speed                        0.238sec/60°             0.192sec/60°
+                                                      (42RPM)                  (52RPM)
+5-3      空载电流Running Current ( no load)                130mA                    150mA
+                                                     16.5kg.cm                19.5kg.cm
+ 5-4       堵车扭力 Stall Torque (at locked)
+                                                    229.54oz.in              271.28oz.in
+         堵转电流
+5-5                                                     2A                      2.5A
+         Stall Current (at locked)
+5-6      静态电流 Idle Current (at stopped)                 6mA                      6mA
+5-7      工作电压 Input Voltage                                       4V-7.4V
+5-8      额定负载 Rated Torgue                            4kg.cm                   5kg.cm
+5-9      额定电流 Rated Current                            500mA                    650mA
+5-10     电机内阻 Terminal resistance                                  2.5Ω
+5-11     Kt常数                                                     8kg.cm/A
+                                     深圳飞特模型有限公司                                     版本EDITION：
+                              SHENZHEN FEETECH RC MODEL CO.,LTD.                       A/0
+
+       型号/MODEL:                             产品规格书                                    日期/Date：
+        STS3215                        PRODUCT SPECIFICATION                          2020-04-10
+                                                                                    页      码 Page：4/8
+6 机械规格 Mechanical Specification：
+ No.            项目(Item)                  规格(Specification)                   备注（remarks）
+6-1     外观尺寸 Size                 45.2X24.7X35                          见图纸See drawings
+6-2     机构极限角度 Limit Angle        No limit
+6-3     外壳材质 Case material        PA+GF
+6-4     齿轮材质 Gear material        铜 Copper
+6-5     轴承类型 Bearing type         滚珠轴承 Ball bearings
+                                  类型Type   12Bits Magnetic
+                                           Coding
+6-6     角度传感器 Angle Sansor        角度 Angle 360°
+                                  寿命 Life       No limite
+                                  类型 Type       5264-3P
+                                  Material材 PP
+                                  质
+        连接器和电缆                    线长度
+6-7                                         15CM
+        Connector and Cable       Length
+                                            1               GND
+                                  引脚定义      2               Vcc
+                                  Pin
+                                  Definition                Signal/TT
+                                                3
+                                                            L
+6-8     重量The Weight              55± 1g
+6-9     出力轴 Horn Type             25T/OD5.9mm
+6-10    减速比Gear Ratio             1/345
+6-11    齿轮虚位Back Lash             ≦0.5°
+        摇臂虚位
+6-12                              0°
+        The rocker phantom
+        出力轴螺丝
+6-13                              M3X6
+        The rocker screw
+6-14    马达   Motor                Core Motor
+
+7-1 控制特性Control Specification：
+ No.                  项目(Item)                        规格(Specification)            备注（remarks）
+7-1     控制信号 Command Signal                     Digital Packet
+                                                Half Duplex Asynchronous Serial         8bit, 1stop,
+7-2     协议类型 Protocol Type                                                                No Parity
+                                                Communication
+7-3     ID范围 ID range                           0-253                                   Customizable
+                                                                                   Customizable （出厂默
+7-4     通讯波特率 Communication Baud Rate           38400bps ~ 1 Mbps                         认1Mbps）
+                                                                                  Customizable    （支持修
+7-5     控制算法 Control Algorithm                  PID                                         改）
+
+7-6     中位 Neutral Position                     180°（2048）
+7-7     旋转角度     Running degree                 360°(when 0～4096)
+7-8     电子分辨率 Resolution [deg/pulse]            0.088°(360°/4096)
+7-9     旋转方向 Rotating Direction                 Clockwise(0→4096）                       Customizable
+
+                                                Load（负载）, Position（位
+                                                置）,Speed（工作速度）, Input
+7-10    反馈 Feedback
+                                                Voltage（输入电压），Current（工作
+                                                电流）,Temperature（工作温度）
+                                  深圳飞特模型有限公司                          版本EDITION：
+                           SHENZHEN FEETECH RC MODEL CO.,LTD.            A/0
+
+       型号/MODEL:                           产品规格书                       日期/Date：
+        STS3215                      PRODUCT SPECIFICATION             2020-04-10
+
+                                                                     页    码 Page：5/8
+
+7-2. 控制特性Control Specification：
+ No.               项目(Item)                     规格(Specification)    备注（remarks）
+                                                                    堵在大于堵转的80%并持续
+                                                                    2S后进入保护，重新
+                                           过载 Over Load             发位置指令，会清除过载
+                                                                    保护标志,可自定义设定堵
+                                                                    转的百分比和持续时间
+                                                                    运行中电流大于2A并持续
+                                                                    2s后，关闭输出并进入过
+                                           过流 Over Current          流保护，重新发位置指
+                                                                    令，会清除过流保护标志,
+ 7-11   电子保护 Electronic Protection                                  可自定义设定电流值和持
+                                                                    续时间
+                                                                    大于7.4V或者小于4V进入
+                                                                    保护，电压恢复正常范围
+                                           过压 Over Voltage          后，自动解除保护,可自定
+                                                                    义设定电压值范围
+
+
+                                           过热 Over Hot              大于70℃关闭扭矩输出
+
+
+                                                                    默认此模式，0-360度绝对
+                                           模式0：角度伺服模式               位置可控
+
+                                                                    电机模式，随负载增加，
+                                           模式1：速度闭环电机模式             速度智能维持不减速。
+7-12    运行模式 Operating Modes
+                                                                    电机模式，随负载增加，
+                                           模式2：速度开环电机模式             速度会持续减慢
+
+                                                                    相对当前位置进行步进运
+                                           模式3：步进模式                 动
+                                           最高精度下可以正负7圈绝对位置控
+7-13    多圈模式 Multi-Loop Mode                                扩大分辨率，圈数可翻倍
+                                           制，但掉电圈数不保存
+                                           一键较准，360度角度任意位置安
+7-14    置中功能 Step Middle Position                                   40号地址输入128
+                                           装，一键较正当前位置为中位
+                                   深圳飞特模型有限公司                                  版本EDITION：
+                            SHENZHEN FEETECH RC MODEL CO.,LTD.                    A/0
+
+       型号/MODEL:                             产品规格书                              日期/Date：
+        STS3215                        PRODUCT SPECIFICATION                    2020-04-10
+                                                                               页     码 Page：6/8
+8 可靠性测试 Reliability            Testing
+                                            规格
+ No.          项目(Item)                                                 备注（remarks）
+                                      (Specification)
+                                                        正转60度0.25S，停0.5S，反转60度0.25S，停0.5S为一
+8-1     负载寿命测试Life test          ＞100000次               次，持续循环工作，负载1/5堵转扭力。
+
+8-2     马达噪音The motor noises     45±5dB                 环境噪音40-45 dB   距离噪音仪30cm处测试
+
+        舵机噪音Steering gear
+8-3                              60±5dB                 环境噪音40-45 dB   距离噪音仪30cm处测试
+        noises
+        防水性能Waterproof
+8-4                              No
+        performance
+9 外观尺寸 Outside Dimension(单位Unit：mm)
+                           深圳飞特模型有限公司                    版本EDITION：
+                    SHENZHEN FEETECH RC MODEL CO.,LTD.      A/0
+
+   型号/MODEL:                    产品规格书                    日期/Date：
+    STS3215               PRODUCT SPECIFICATION          2020-03-28
+                                                         页   码 Page：7/8
+10 配件 Accessories
+
+
+
+
+                           No Accessories
+                               深圳飞特模型有限公司                    版本EDITION：
+                        SHENZHEN FEETECH RC MODEL CO.,LTD.      A/0
+
+    型号/MODEL:                        产品规格书                   日期/Date：
+     STS3215                   PRODUCT SPECIFICATION         2020-04-10
+                                                             页   码 Page：8/8
+11 接口定义 Interface Definition
+控制信号参数（Control signal parameter）
+最大位置更新率 Max Position Update Rate     1ms
+信号高电平电压 Signal high Voltage          2V-5V
+信号低电平电压 Signal Low Voltage           0.0V-0.45V
+
+
+
+
+12 包装出货简图 The Packaging Detail/产品清单
+
