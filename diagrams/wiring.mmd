@@ -1,0 +1,31 @@
+flowchart LR
+    subgraph Host
+        PC["Ubuntu PC<br/>LeRobot driver"]
+    end
+    subgraph Adapter["Waveshare Bus Servo Adapter (A)"]
+        USB["USB-C (C1)"] 
+        JMP["jumpers B (C4)"]
+        BR["bridge/CH340"]
+        XCVR["bus transceiver"]
+        P1["servo port 1 (C5): D V G"]
+        P2["servo port 2 (C5): D V G"]
+        DC["DC5521 (C2) / screw term (C3)"]
+        USB --> JMP --> BR --> XCVR --> P1
+        XCVR --> P2
+        DC --> P1
+    end
+    PSU["Bench PSU 7.4 V"]
+    M1["STS3215 #1 pigtail (C6)"]
+    M2["STS3215 #2"]
+    M3["STS3215 #3"]
+    M4["STS3215 #4"]
+    M5["STS3215 #5"]
+    M6["STS3215 #6"]
+    PC -->|"USB-C data"| USB
+    PSU -->|"V/G"| DC
+    P1 -->|"loom C7"| M1 --> M2 --> M3 --> M4 --> M5 --> M6
+
+    classDef host fill:#def,stroke:#069;
+    classDef pwr fill:#fde,stroke:#900;
+    class PC,USB,BR,XCVR,P1,P2 host;
+    class PSU,DC pwr;
