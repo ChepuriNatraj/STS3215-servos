@@ -118,11 +118,13 @@ STS3215 servos/
 │   ├── 07-single-motor-bringup.md  ← the laboratory bring-up sequence
 │   ├── 08-debugging.md             ← troubleshooting handbook
 │   ├── 09-reverse-engineering.md   ← probing, capturing, IC identification methodology
-│   └── 10-reference-library.md     ← datasheets, manuals, repos, lectures
+│   ├── 10-reference-library.md     ← datasheets, manuals, repos, lectures
+│   └── 11-live-bringup-session.md  ← first live run: frames, bytes, anomalies (2026-08-05)
 ├── datasheets/                     ← official PDFs (offline copies cited by the docs)
 ├── diagrams/                       ← mermaid + ASCII diagrams (.mmd / .txt)
 ├── assets/                         ← photographs (add yours; naming convention in ch04)
 ├── scripts/                        ← safe bring-up scripts (Python 3, pyserial)
+│                                   · bench.py (CLI) · servo_dash.py (web dashboard)
 └── logs/                           ← bench-log templates; local logs are gitignored
 ```
 
