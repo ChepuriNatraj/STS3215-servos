@@ -166,6 +166,7 @@ def cmd_estop(_args) -> None:
 
 
 def main() -> None:
+    global PORT
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("command", choices=["ping", "read", "torque", "move", "mode", "speed", "estop"])
     p.add_argument("--id", type=int, default=1)
@@ -177,7 +178,6 @@ def main() -> None:
     p.add_argument("--port", default=PORT)
     args = p.parse_args()
     if args.port:
-        global PORT
         PORT = args.port
     {"ping": cmd_ping, "read": cmd_read, "torque": cmd_torque, "move": cmd_move,
      "mode": cmd_mode, "speed": cmd_speed, "estop": cmd_estop}[args.command](args)
